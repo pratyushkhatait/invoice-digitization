@@ -1,4 +1,4 @@
-# SMS-Service #
+# Invoice Digitization(Plate-IQ) #
 Implementation of an invoice digitization service in Django.
 ## Dependencies ##
     -Python3
@@ -15,7 +15,7 @@ Implementation of an invoice digitization service in Django.
     - pip install -r requirements.txt
 4. Django runserver
     - python manage.py runserver
-5. Create any sample invoice pdf file
+5. Create any sample invoice pdf file (Ref: invoice_digitization/data/mockup_invoice_data.pdf)
 6. Call APIs hosted at: http://127.0.0.1:8000/
     1. Collect invoice(pdf document) from end customer using below POST API:
         http://127.0.0.1:8000/invoice-digitization/collect-invoice/
@@ -26,5 +26,5 @@ Implementation of an invoice digitization service in Django.
     4. Fetch invoice details using below GET API:
         http://127.0.0.1:8000/invoice-digitization/invoice-details/?invoice_number=85677d60-06af-4cbb-8c26-e704057031b7
         
-### Note: Attaching Postman collection for all the above APIS ###
+### Note: Attaching Postman collection for all the above APIS at path: invoice_digitization/data/plate_iq.postman_collection.json ###
 
