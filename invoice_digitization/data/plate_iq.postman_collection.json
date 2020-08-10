@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "a7fe01f3-f103-4d78-a7fd-2170728a9ff5",
+		"name": "plate_iq",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/invoice-digitization/ping/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/invoice-digitization/ping/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"invoice-digitization",
+						"ping",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "collect-invoice: http://127.0.0.1:8000/invoice-digitization/collect-invoice/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/invoice-digitization/collect-invoice/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"invoice-digitization",
+						"collect-invoice",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invoice-status: http://127.0.0.1:8000/invoice-digitization/invoice-status/?invoice_number=1e9848d6-d50e-48b3-89e5-9896cb5fec28",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/invoice-digitization/invoice-status/?invoice_number=1e9848d6-d50e-48b3-89e5-9896cb5fec28",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"invoice-digitization",
+						"invoice-status",
+						""
+					],
+					"query": [
+						{
+							"key": "invoice_number",
+							"value": "1e9848d6-d50e-48b3-89e5-9896cb5fec28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-invoice: http://127.0.0.1:8000/invoice-digitization/update-invoice/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"invoice_number\": \"1e9848d6-d50e-48b3-89e5-9896cb5fec28\",\n\t\"status\": true,\n\t\"from_client\": \"green.vegies.ltd\",\n\t\"for_client\": \"hard rock cafe\",\n\t\"products\": [\n\t\t{\n\t\t\t\"item\": \"potato\",\n\t\t\t\"quantity\": 20,\n\t\t\t\"unit_price\": 30.0\n\t\t},\n\t\t{\n\t\t\t\"item\": \"tomato\",\n\t\t\t\"quantity\": 10,\n\t\t\t\"unit_price\": 40\n\t\t}\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/invoice-digitization/update-invoice/?",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"invoice-digitization",
+						"update-invoice",
+						""
+					],
+					"query": [
+						{
+							"key": "invoice_number",
+							"value": "1e9848d6-d50e-48b3-89e5-9896cb5fec28",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invoice-details: http://127.0.0.1:8000/invoice-digitization/invoice-details/?invoice_number=1e9848d6-d50e-48b3-89e5-9896cb5fec28",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/invoice-digitization/invoice-details/?invoice_number=1e9848d6-d50e-48b3-89e5-9896cb5fec28",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"invoice-digitization",
+						"invoice-details",
+						""
+					],
+					"query": [
+						{
+							"key": "invoice_number",
+							"value": "1e9848d6-d50e-48b3-89e5-9896cb5fec28"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -30,7 +30,7 @@ def update_document(data):
                 p.quantity = product['quantity']
                 p.unit_price = product['unit_price']
                 p.amount = product['quantity'] * product['unit_price']
-                p.invoice_id = invoice
+                p.invoice = invoice
                 p.save()
                 logger.info("update_document: updated the product")
             except Product.DoesNotExist:
@@ -39,7 +39,7 @@ def update_document(data):
                     quantity=product['quantity'],
                     unit_price=product['unit_price'],
                     amount=product['quantity']*product['unit_price'],
-                    invoice_id=invoice
+                    invoice=invoice
                 )
                 logger.info("update_document: Created the product")
     invoice.save()
